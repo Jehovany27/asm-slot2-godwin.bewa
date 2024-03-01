@@ -16,10 +16,10 @@ loop1:
 check:
 	mov al, byte [rdi + rcx]
 	mov bl, byte [rsi + 0]
-	cmp al, bl
+	test al, bl
 	je fin
-	cmp al, 0
-	jz null
+	test al, 0
+	je null
 	inc rcx
 	jmp check
 	
@@ -28,6 +28,7 @@ fin:
 	dec rcx
 	mov al, byte [rdi + rcx]
 	dec al
+	add  al , 1
 	movsx rax, al
 	ret
 	
