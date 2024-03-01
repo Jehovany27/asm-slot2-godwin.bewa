@@ -1,0 +1,30 @@
+Exercice:
+
+You have to implement a function which takes two parameters. The first one is
+a string and the second one is the character X to find in this string.
+If you find the first occurence of the character X, then get the character Y previous to him. The goal of this
+exercice is to return the previous character (Y-2) of the alphabet position, of this previous character (Y).
+
+Example:
+    my_sous("Mourad esT gEntil", 'a')     ====> 'r' from ("Mourad")      ====> return ('p')
+    my_sous("Mourad esT gEntil", 'e')     ====> 'd' from ("Mourad")      ====> return ('b')
+    my_sous("Mourad esT gEntil", 'g')     ====> 'T' from ("esT")         ====> return ('R')
+    my_sous("Mourad esT gEntil", 'n')     ====> 'E' from ("gEntil")      ====> return ('C')
+    my_sous("Mourad esT gEntil", 'Z')     ====>       NULL               ====> return ('@')
+    my_sous("Mourad esT gEntil", '\0')    ====>       NULL               ====> return ('@')
+    my_sous("Mourad est gEntil", NULL)    ====>       NULL               ====> return ('@')
+    my_sous("", NULL)                     ====>       NULL               ====> return ('@')
+
+Pay attention, we only want alphabetics characters, so if the character checked (Y-2) is not an alphabetic character,
+move on till finding an alphabetic one.
+
+
+Steps:
+
+1) Name your file fac.asm
+
+2) Name your function "my_sous" and don't forget to import it (global)
+
+3) Compile with: "make re"
+
+4) Test with: ./main
