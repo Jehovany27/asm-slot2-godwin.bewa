@@ -28,7 +28,7 @@ fin:
 	dec rcx
 	mov al, byte [rdi + rcx]
 	dec al
-	movsx al, al
+	movsx rax, al
 	ret
 	
 null:
